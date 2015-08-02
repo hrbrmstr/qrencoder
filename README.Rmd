@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 
 qrencoder uses `libqrencode` to make QR codes in R
 
+I have no idea why you would want to, but this was to help answer a question on StackOverflow.
+
 The following functions are implemented:
 
 - `qrencode`:	Return a QR encoded string as a matrix

@@ -1,6 +1,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 qrencoder uses `libqrencode` to make QR codes in R
 
+I have no idea why you would want to, but this was to help answer a question on StackOverflow.
+
 The following functions are implemented:
 
 -   `qrencode`: Return a QR encoded string as a matrix
@@ -87,7 +89,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Sun Aug  2 12:42:55 2015"
+#> [1] "Sun Aug  2 13:06:17 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
