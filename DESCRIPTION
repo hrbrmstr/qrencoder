@@ -1,8 +1,11 @@
 Package: qrencoder
-Title: What the Package Does (one line, title case)
+Title: Makes QR codes
 Version: 0.0.0.9000
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: What the package does (one paragraph).
+Description: Uses libqrencode to make QR codes
 Depends: R (>= 3.2.1)
 License: MIT + file LICENSE
 LazyData: true
+Suggests: testthat
+LinkingTo: Rcpp
+Imports: Rcpp, base64enc, raster, png

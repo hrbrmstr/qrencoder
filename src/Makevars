@@ -1,0 +1,2 @@
+PKG_CPPFLAGS=-Wall -mtune=core2 -g -O2 -DNDEBUG
+PKG_LIBS=-lqrencode

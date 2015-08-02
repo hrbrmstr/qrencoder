@@ -1,0 +1,81 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r init, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+qrencoder uses `libqrencode` to make QR codes in R
+
+The following functions are implemented:
+
+- `qrencode`:	Return a QR encoded string as a matrix
+- `qrencode_df`:	Return a QR encoded string as an x, y, z data.frame
+- `qrencode_png`:	Return a QR encoded string as a base 64 encoded inline png
+- `qrencode_raster`:	Return a QR encoded string as a raster object
+
+NOTE: You'll need `Rcpp`, `base64enc`, `raster` & `png` installed (and, `libqrencode` of course). 
+
+Not tested under Windows.
+
+### News
+
+- Version  released
+
+### Installation
+
+```{r show, eval=FALSE}
+devtools::install_github("hrbrmstr/qrencoder")
+```
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, error=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r qr}
+library(qrencoder)
+library(raster)
+
+# current verison
+packageVersion("qrencoder")
+
+url <- "http://rud.is/b"
+head(qrencode(url))
+
+head(qrencode_df(url))
+
+qrencode_png(url)
+
+qrencode_raster(url)
+
+image(qrencode_raster("http://rud.is/b"), 
+      asp=1, col=c("black", "white"), axes=FALSE, 
+      xlab="", ylab="")
+```
+
+### Test Results
+
+```{r, test}
+library(qrencoder)
+library(testthat)
+
+date()
+
+test_dir("tests/")
+```
+
+### Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
+By participating in this project you agree to abide by its terms.
