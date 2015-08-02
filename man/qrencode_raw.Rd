@@ -4,12 +4,32 @@
 \alias{qrencode_raw}
 \title{Encodes a string as a QR code}
 \usage{
-qrencode_raw(to_encode)
+qrencode_raw(to_encode, version = 0L, level = 0L, hint = 2L,
+  caseinsensitive = 1L)
 }
 \arguments{
 \item{to_encode}{character string to encode}
+
+\item{version}{version of the symbol. If \code{0}, the library chooses the
+minimum version for the given input data.}
+
+\item{level}{error correction level (\code{0} - \code{3}, lowest to highest)}
+
+\item{hint}{tell the library how Japanese Kanji characters should be
+encoded. If "\code{3}", the library assumes that the
+given string contains Shift-JIS characters and encodes them in
+Kanji-mode. If "\code{2}" is given, all of non-alphanumerical
+characters will be encoded as is. If you want to embed UTF-8
+string, choose this. Other mode will cause EINVAL error.\cr\cr
+"\code{0}" is "numeric mode", "\code{1}" is "alphanumeric mode",
+"\code{5}" is "ECI mode".}
+
+\item{caseinsensitive}{case-sensitive(\code{1}) or not(\code{0}).}
 }
 \description{
 Encodes a string as a QR code
+}
+\seealso{
+\url{http://www.qrcode.com/en/about/version.html}
 }
 

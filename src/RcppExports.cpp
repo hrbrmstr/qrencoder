@@ -6,13 +6,17 @@
 using namespace Rcpp;
 
 // qrencode_raw
-NumericMatrix qrencode_raw(std::string to_encode);
-RcppExport SEXP qrencoder_qrencode_raw(SEXP to_encodeSEXP) {
+NumericMatrix qrencode_raw(std::string to_encode, int version, int level, int hint, int caseinsensitive);
+RcppExport SEXP qrencoder_qrencode_raw(SEXP to_encodeSEXP, SEXP versionSEXP, SEXP levelSEXP, SEXP hintSEXP, SEXP caseinsensitiveSEXP) {
 BEGIN_RCPP
     Rcpp::RObject __result;
     Rcpp::RNGScope __rngScope;
     Rcpp::traits::input_parameter< std::string >::type to_encode(to_encodeSEXP);
-    __result = Rcpp::wrap(qrencode_raw(to_encode));
+    Rcpp::traits::input_parameter< int >::type version(versionSEXP);
+    Rcpp::traits::input_parameter< int >::type level(levelSEXP);
+    Rcpp::traits::input_parameter< int >::type hint(hintSEXP);
+    Rcpp::traits::input_parameter< int >::type caseinsensitive(caseinsensitiveSEXP);
+    __result = Rcpp::wrap(qrencode_raw(to_encode, version, level, hint, caseinsensitive));
     return __result;
 END_RCPP
 }

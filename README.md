@@ -36,42 +36,43 @@ packageVersion("qrencoder")
 url <- "http://rud.is/b"
 head(qrencode(url))
 #>      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12] [,13] [,14] [,15] [,16] [,17] [,18] [,19] [,20]
-#> [1,]    1    1    1    1    1    1    1    0    0     1     0     1     1     0     0     0     1     0     0     1
-#> [2,]    1    0    0    0    0    0    1    0    0     0     0     1     1     1     1     0     1     1     0     1
-#> [3,]    1    0    1    1    1    0    1    0    1     0     0     0     1     0     1     0     0     0     1     1
-#> [4,]    1    0    1    1    1    0    1    0    1     0     0     1     0     0     0     1     1     1     0     0
-#> [5,]    1    0    1    1    1    0    1    0    0     0     1     1     0     1     1     0     1     0     1     1
-#> [6,]    1    0    0    0    0    0    1    0    0     1     0     1     0     1     1     1     0     0     0     0
-#>      [,21] [,22] [,23] [,24] [,25] [,26] [,27] [,28] [,29]
-#> [1,]     1     0     1     1     1     1     1     1     1
-#> [2,]     0     0     1     0     0     0     0     0     1
-#> [3,]     0     0     1     0     1     1     1     0     1
-#> [4,]     1     0     1     0     1     1     1     0     1
-#> [5,]     1     0     1     0     1     1     1     0     1
-#> [6,]     0     0     1     0     0     0     0     0     1
+#> [1,]    1    1    1    1    1    1    1    0    1     0     0     0     0     0     1     1     1     1     1     1
+#> [2,]    1    0    0    0    0    0    1    0    1     1     1     1     0     0     1     0     0     0     0     0
+#> [3,]    1    0    1    1    1    0    1    0    0     0     1     1     1     0     1     0     1     1     1     0
+#> [4,]    1    0    1    1    1    0    1    0    1     0     1     1     0     0     1     0     1     1     1     0
+#> [5,]    1    0    1    1    1    0    1    0    0     1     1     0     1     0     1     0     1     1     1     0
+#> [6,]    1    0    0    0    0    0    1    0    0     0     1     0     0     0     1     0     0     0     0     0
+#>      [,21]
+#> [1,]     1
+#> [2,]     1
+#> [3,]     1
+#> [4,]     1
+#> [5,]     1
+#> [6,]     1
 
 head(qrencode_df(url))
 #>   x  y z
-#> 1 0 28 1
-#> 2 1 28 1
-#> 3 2 28 1
-#> 4 3 28 1
-#> 5 4 28 1
-#> 6 5 28 1
+#> 1 0 20 1
+#> 2 1 20 1
+#> 3 2 20 1
+#> 4 3 20 1
+#> 5 4 20 1
+#> 6 5 20 1
 
 qrencode_png(url)
-#> [1] "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAAAAABz+DjTAAAACXBIWXMAAC4jAAAuIwF4pT92AAAA40lEQVQokU2TWxKEQAgDO1tz/yv3fvBSq9SCgYQEIwAEIwGDpKOPAAgBJBhCR3+gTj6QrlPhcZchFgjTmQUGiYPZ2UylXd+ngYeb/NwdzbVx2F/wByhFu5AHqSeZN1jUqgB5mA7MOPghNgN0B3Hl8VctLH1JV9rTDYq64FwFV1ZI8ePZfZeM6xXkjcQQKJVSofSwJUc/2j5Xq3DKtl5l2atIyEzeHGmmGZbj1Dp+dnhuOY3yvjsZbxWIB7ZKc3bqm221GLCH02osC9fKGMhnJyvS/0L/DbeTw1OaXIs/uXwolOZ/QFfD+4NkWyYAAAAASUVORK5CYII="
+#> [1] "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAAAAACMfPpKAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAfElEQVQYlU2QWwrEMAwDR0vuf+XZj8qJSyjIyNYjAkAMQNFhkBCKzoNiin70kxKBN41ENuf7+9AZWQOGRx/2m4TeKy2YO0GyDpwszW5EUCs/ur78NZtGvSa8azdPDGttsonot8LtDFNnrs4yLSbuJk0ajnV3vevhCxUj4Q+R11n764g4WgAAAABJRU5ErkJggg=="
 
 qrencode_raster(url)
 #> class       : RasterLayer 
-#> dimensions  : 29, 29, 841  (nrow, ncol, ncell)
-#> resolution  : 0.03448276, 0.03448276  (x, y)
+#> dimensions  : 21, 21, 441  (nrow, ncol, ncell)
+#> resolution  : 0.04761905, 0.04761905  (x, y)
 #> extent      : 0, 1, 0, 1  (xmin, xmax, ymin, ymax)
 #> coord. ref. : NA 
 #> data source : in memory
 #> names       : layer 
 #> values      : 0, 1  (min, max)
 
+par(mar=c(0,0,0,0))
 image(qrencode_raster("http://rud.is/b"), 
       asp=1, col=c("black", "white"), axes=FALSE, 
       xlab="", ylab="")
@@ -86,7 +87,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Sun Aug  2 11:30:30 2015"
+#> [1] "Sun Aug  2 12:41:39 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================

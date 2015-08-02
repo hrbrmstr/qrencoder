@@ -9,4 +9,7 @@ qrencode_df(to_encode)
 \description{
 Useful for ggplot::geom_raster
 }
+\examples{
+head(qrencode_df("http://rud.is/b"))
+}
 

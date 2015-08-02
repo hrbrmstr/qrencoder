@@ -4,7 +4,10 @@
 #' @import raster
 #' @examples
 #' library(raster)
+#' old_mar <- par()$mar
+#' par(mar=c(0,0,0,0))
 #' image(qrencode_raster("http://rud.is/b"), asp=1, col=c("black", "white"), axes=FALSE, xlab="", ylab="")
+#' par(mar=old_mar)
 qrencode_raster <- function(to_encode) {
   raster(qrencode_raw(to_encode))
 }
@@ -14,6 +17,7 @@ qrencode_raster <- function(to_encode) {
 #' Useful for ggplot::geom_raster
 #'
 #' @export
+#' @examples
 #' head(qrencode_df("http://rud.is/b"))
 qrencode_df <- function(to_encode) {
   to_xyz(qrencode_raw(to_encode))
