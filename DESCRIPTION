@@ -9,3 +9,5 @@ LazyData: true
 Suggests: testthat
 LinkingTo: Rcpp
 Imports: Rcpp, base64enc, raster, png
+URL: http://github.com/hrbrmstr/qrencoder
+BugReports: https://github.com/hrbrmstr/qrencoder/issues

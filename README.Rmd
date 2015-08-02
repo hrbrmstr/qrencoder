@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 qrencoder uses `libqrencode` to make QR codes in R
 
-I have no idea why you would want to, but this was to help answer a question on StackOverflow.
+I have no idea why you would want to, but this was to help answer a question (actually, two questions - _who knew QR codes were so popular?_) on StackOverflow.
 
 The following functions are implemented:
 
@@ -27,11 +27,11 @@ The following functions are implemented:
 
 NOTE: You'll need `Rcpp`, `base64enc`, `raster` & `png` installed (and, `libqrencode` of course). 
 
-Not tested under Windows.
+NOTE: *Not* tested under Windows.
 
 ### News
 
-- Version  released
+- Version 0.0.0.9000 released
 
 ### Installation
 

@@ -1,7 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 qrencoder uses `libqrencode` to make QR codes in R
 
-I have no idea why you would want to, but this was to help answer a question on StackOverflow.
+I have no idea why you would want to, but this was to help answer a question (actually, two questions - *who knew QR codes were so popular?*) on StackOverflow.
 
 The following functions are implemented:
 
@@ -12,11 +12,11 @@ The following functions are implemented:
 
 NOTE: You'll need `Rcpp`, `base64enc`, `raster` & `png` installed (and, `libqrencode` of course).
 
-Not tested under Windows.
+NOTE: *Not* tested under Windows.
 
 ### News
 
--   Version released
+-   Version 0.0.0.9000 released
 
 ### Installation
 
@@ -89,7 +89,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Sun Aug  2 13:06:17 2015"
+#> [1] "Sun Aug  2 18:02:04 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
