@@ -61,7 +61,7 @@ qrencode_raster(url)
 
 par(mar=c(0,0,0,0))
 image(qrencode_raster("http://rud.is/b"), 
-      asp=1, col=c("black", "white"), axes=FALSE, 
+      asp=1, col=c("white", "black"), axes=FALSE, 
       xlab="", ylab="")
 ```
 

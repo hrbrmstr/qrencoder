@@ -74,7 +74,7 @@ qrencode_raster(url)
 
 par(mar=c(0,0,0,0))
 image(qrencode_raster("http://rud.is/b"), 
-      asp=1, col=c("black", "white"), axes=FALSE, 
+      asp=1, col=c("white", "black"), axes=FALSE, 
       xlab="", ylab="")
 ```
 
@@ -87,7 +87,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Sun Aug  2 12:41:39 2015"
+#> [1] "Sun Aug  2 12:42:55 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
