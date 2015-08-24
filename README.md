@@ -1,6 +1,8 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 qrencoder uses `libqrencode` to make QR codes in R
 
+NOTE: there now exists a package on CRAN -- [qrcode](https://cran.rstudio.com/web/packages/qrcode/index.html) -- that does not require a C/C++ library. I have no intention of submitting this to CRAN anytime soon.
+
 I have no idea why you would want to, but this was to help answer a question (actually, two questions - *who knew QR codes were so popular?*) on StackOverflow.
 
 The following functions are implemented:
@@ -89,7 +91,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Sun Aug  2 18:02:04 2015"
+#> [1] "Sun Aug 23 21:33:22 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
