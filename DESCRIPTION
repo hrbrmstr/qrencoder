@@ -1,13 +1,14 @@
 Package: qrencoder
 Title: Makes QR codes
-Version: 0.0.0.9000
+Version: 0.0.1.9000
 Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
 Description: Uses libqrencode to make QR codes
-Depends: R (>= 3.2.1)
+Depends: R (>= 3.1.0)
 License: MIT + file LICENSE
 LazyData: true
 Suggests: testthat
 LinkingTo: Rcpp
-Imports: Rcpp, base64enc, raster, png
+Depends: raster
+Imports: Rcpp, base64enc, png
 URL: http://github.com/hrbrmstr/qrencoder
 BugReports: https://github.com/hrbrmstr/qrencoder/issues

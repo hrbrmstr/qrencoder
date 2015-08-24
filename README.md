@@ -18,6 +18,7 @@ NOTE: *Not* tested under Windows.
 
 ### News
 
+-   Version 0.0.1.9000 : made `raster` a `Depends` vs `Imports`
 -   Version 0.0.0.9000 released
 
 ### Installation
@@ -30,12 +31,12 @@ devtools::install_github("hrbrmstr/qrencoder")
 
 ``` r
 library(qrencoder)
-library(raster)
+#> Loading required package: raster
 #> Loading required package: sp
 
 # current verison
 packageVersion("qrencoder")
-#> [1] '0.0.0.9000'
+#> [1] '0.0.1.9000'
 
 url <- "http://rud.is/b"
 head(qrencode(url))
@@ -91,7 +92,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Sun Aug 23 21:33:22 2015"
+#> [1] "Mon Aug 24 07:38:04 2015"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================

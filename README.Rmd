@@ -33,6 +33,7 @@ NOTE: *Not* tested under Windows.
 
 ### News
 
+- Version 0.0.1.9000 : made `raster` a `Depends` vs `Imports`
 - Version 0.0.0.9000 released
 
 ### Installation
@@ -49,7 +50,6 @@ options(width=120)
 
 ```{r qr}
 library(qrencoder)
-library(raster)
 
 # current verison
 packageVersion("qrencoder")
