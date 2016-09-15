@@ -1,5 +1,6 @@
 #' Return a QR encoded string as a raster object
 #'
+#' @param to_encode the data to encode
 #' @export
 #' @import raster
 #' @examples
@@ -17,6 +18,7 @@ qrencode_raster <- function(to_encode) {
 #'
 #' Useful for ggplot::geom_raster
 #'
+#' @param to_encode the data to encode
 #' @export
 #' @examples
 #' head(qrencode_df("http://rud.is/b"))
@@ -28,6 +30,7 @@ qrencode_df <- function(to_encode) {
 #'
 #' Useful if you want to do your own post-processing
 #'
+#' @param to_encode the data to encode
 #' @export
 #' @examples
 #' qrencode("http://rud.is/b")
@@ -37,6 +40,7 @@ qrencode <- function(to_encode) {
 
 #' Return a QR encoded string as a base 64 encoded inline png
 #'
+#' @param to_encode the data to encode
 #' @note \code{data:image/png;base64,} is prepended to the encoded png
 #' @import base64enc
 #' @import png

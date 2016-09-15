@@ -4,7 +4,7 @@
 #' used to authenticate transactions, provide access to multi-factor authenticationan
 #' services and enable general data transfer in an image. QR codes use four standardized
 #' encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store
-#' data. MAtrix barcode generation is performed efficiently in C via the inlcuded
+#' data. Matrix barcode generation is performed efficiently in C via the inlcuded
 #' 'libqrencoder' library created by Kentaro Fukuchi.
 #'
 #' @name qrencoder

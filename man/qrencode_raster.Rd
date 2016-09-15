@@ -6,6 +6,9 @@
 \usage{
 qrencode_raster(to_encode)
 }
+\arguments{
+\item{to_encode}{the data to encode}
+}
 \description{
 Return a QR encoded string as a raster object
 }

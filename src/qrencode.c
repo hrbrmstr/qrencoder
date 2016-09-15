@@ -392,7 +392,6 @@ extern unsigned char *FrameFiller_testMQR(int version)
 	for(i = 0; i < length; i++) {
 		p = FrameFiller_next(&filler);
 		if(p == NULL) {
-			fprintf(stderr, "Frame filler run over the frame!\n");
 			return frame;
 		}
 		*p = (unsigned char)(i & 0x7f) | 0x80;

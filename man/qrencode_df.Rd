@@ -6,6 +6,9 @@
 \usage{
 qrencode_df(to_encode)
 }
+\arguments{
+\item{to_encode}{the data to encode}
+}
 \description{
 Useful for ggplot::geom_raster
 }

@@ -12,6 +12,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+![](https://travis-ci.org/hrbrmstr/qrencoder.svg)
+
 `qrencoder` : Make QR codes in R
 
 There is another package on CRAN -- [qrcode](https://cran.rstudio.com/web/packages/qrcode/index.html) -- that is not C-backed.

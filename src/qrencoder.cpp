@@ -4,6 +4,7 @@
 using namespace Rcpp;
 
 //' @title Encodes a string as a QR code
+//' @description Encodes a string as a QR coder
 //' @param to_encode character string to encode
 //' @param version version of the symbol. If \code{0}, the library chooses the
 //'        minimum version for the given input data.
@@ -19,7 +20,7 @@ using namespace Rcpp;
 //' @param caseinsensitive case-sensitive(\code{1}) or not(\code{0}).
 //' @seealso \url{http://www.qrcode.com/en/about/version.html}
 //' @export
-//[[Rcpp::export]]
+// [[Rcpp::export]]
 NumericMatrix qrencode_raw(std::string to_encode,
                            int version=0,
                            int level=0,

@@ -1,5 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+![](https://travis-ci.org/hrbrmstr/qrencoder.svg)
+
 `qrencoder` : Make QR codes in R
 
 There is another package on CRAN -- [qrcode](https://cran.rstudio.com/web/packages/qrcode/index.html) -- that is not C-backed.
@@ -84,7 +86,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Thu Sep 15 17:21:40 2016"
+#> [1] "Thu Sep 15 17:44:41 2016"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================

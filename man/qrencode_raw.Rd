@@ -26,6 +26,9 @@ string, choose this. Other mode will cause EINVAL error.\cr\cr
 
 \item{caseinsensitive}{case-sensitive(\code{1}) or not(\code{0}).}
 }
+\description{
+Encodes a string as a QR coder
+}
 \seealso{
 \url{http://www.qrcode.com/en/about/version.html}
 }

@@ -6,6 +6,9 @@
 \usage{
 qrencode(to_encode)
 }
+\arguments{
+\item{to_encode}{the data to encode}
+}
 \description{
 Useful if you want to do your own post-processing
 }

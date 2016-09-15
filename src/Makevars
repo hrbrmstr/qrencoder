@@ -1,3 +1,2 @@
-PKG_CPPFLAGS=-I. -Wall -mtune=core2 -g -O2 -DNDEBUG
+PKG_CPPFLAGS=-I.
 PKG_CXXFLAGS=-I.
-#PKG_LIBS=-lqrencode

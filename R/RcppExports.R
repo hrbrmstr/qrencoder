@@ -2,6 +2,7 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #' @title Encodes a string as a QR code
+#' @description Encodes a string as a QR coder
 #' @param to_encode character string to encode
 #' @param version version of the symbol. If \code{0}, the library chooses the
 #'        minimum version for the given input data.
