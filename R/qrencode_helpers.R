@@ -27,6 +27,7 @@ qrencode_df <- function(to_encode) {
 #' Return a QR encoded string as a matrix
 #'
 #' Useful if you want to do your own post-processing
+#'
 #' @export
 #' @examples
 #' qrencode("http://rud.is/b")

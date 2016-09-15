@@ -1,9 +1,10 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-qrencoder uses `libqrencode` to make QR codes in R
+`qrencoder` : Make QR codes in R
 
-NOTE: there now exists a package on CRAN -- [qrcode](https://cran.rstudio.com/web/packages/qrcode/index.html) -- that does not require a C/C++ library. I have no intention of submitting this to CRAN anytime soon.
+There is another package on CRAN -- [qrcode](https://cran.rstudio.com/web/packages/qrcode/index.html) -- that is not C-backed.
 
-I have no idea why you would want to, but this was to help answer a question (actually, two questions - *who knew QR codes were so popular?*) on StackOverflow.
+Quick Response codes (QR codes) are a type of matrix bar code and can be used to authenticate transactions, provide access to multi-factor authenticationan services and enable general data transfer in an image. QR codes use four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store data. MAtrix barcode generation is performed efficiently in C via the inlcuded 'libqrencoder' library created by Kentaro Fukuchi.
 
 The following functions are implemented:
 
@@ -11,15 +12,6 @@ The following functions are implemented:
 -   `qrencode_df`: Return a QR encoded string as an x, y, z data.frame
 -   `qrencode_png`: Return a QR encoded string as a base 64 encoded inline png
 -   `qrencode_raster`: Return a QR encoded string as a raster object
-
-NOTE: You'll need `Rcpp`, `base64enc`, `raster` & `png` installed (and, `libqrencode` of course).
-
-NOTE: *Not* tested under Windows.
-
-### News
-
--   Version 0.0.1.9000 : made `raster` a `Depends` vs `Imports`
--   Version 0.0.0.9000 released
 
 ### Installation
 
@@ -36,7 +28,7 @@ library(qrencoder)
 
 # current verison
 packageVersion("qrencoder")
-#> [1] '0.0.1.9000'
+#> [1] '0.1.0'
 
 url <- "http://rud.is/b"
 head(qrencode(url))
@@ -92,13 +84,13 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Mon Aug 24 07:38:04 2015"
+#> [1] "Thu Sep 15 17:21:40 2016"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
 #> OK: 0 SKIPPED: 0 FAILED: 0
 #> 
-#> DONE
+#> DONE ===================================================================================================================
 ```
 
 ### Code of Conduct

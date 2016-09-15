@@ -1,15 +1,29 @@
 Package: qrencoder
-Title: Makes QR codes
-Version: 0.0.1.9000
-Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: Uses libqrencode to make QR codes
+Title: Quick Response Code (QR Code) / Matrix Barcode Creator
+Version: 0.1.0
+Authors@R: c(
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
+    person("Kentaro", "Fukuchi", role=("ctb"), comment="libqrencoder")
+  )
+Maintainer: Bob Rudis <bob@rud.is>
+Description: Quick Response codes (QR codes) are a type of matrix bar code and can be
+    used to authenticate transactions, provide access to multi-factor authenticationan
+    services and enable general data transfer in an image. QR codes use four standardized 
+    encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store 
+    data. MAtrix barcode generation is performed efficiently in C via the inlcuded
+    'libqrencoder' library created by Kentaro Fukuchi.
 Depends:
     R (>= 3.1.0),
     raster
-License: MIT + file LICENSE
+License: GPL-2
 LazyData: true
-Suggests: testthat
+Suggests:
+    testthat
 LinkingTo: Rcpp
-Imports: Rcpp, base64enc, png
+Imports:
+    Rcpp,
+    base64enc,
+    png
 URL: http://github.com/hrbrmstr/qrencoder
 BugReports: https://github.com/hrbrmstr/qrencoder/issues
+RoxygenNote: 5.0.1

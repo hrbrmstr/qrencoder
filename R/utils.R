@@ -1,4 +1,4 @@
-# stolen from RSAGA package
+# appropriate from the RSAGA pkg with :heart:
 
 to_xyz <- function (data, header, varname = "z", colnames = c("x", "y", varname)) {
 
