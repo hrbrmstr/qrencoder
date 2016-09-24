@@ -2,6 +2,11 @@ language: r
 warnings_are_errors: true
 sudo: required
 
+r:
+ - oldrel
+ - release
+ - devel
+
 env:
  global:
    - CRAN: http://cran.rstudio.com
