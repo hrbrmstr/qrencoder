@@ -1,5 +1,3 @@
-# Sample .travis.yml for R projects
-
 language: r
 warnings_are_errors: true
 sudo: required
@@ -10,5 +8,8 @@ env:
 
 notifications:
   email:
-    on_success: change
-    on_failure: change
+    - bob@rud.is
+  irc:
+    channels:
+      - "104.236.112.222#builds"
+    nick: travisci
