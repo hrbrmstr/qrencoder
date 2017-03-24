@@ -18,4 +18,3 @@ Return a QR encoded string as a base 64 encoded inline png
 \examples{
 cat(qrencode_png("http://rud.is/b"))
 }
-

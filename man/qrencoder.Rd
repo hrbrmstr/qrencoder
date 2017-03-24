@@ -7,13 +7,12 @@
 \title{Quick Response Code (QR Code) / Matrix Barcode Creator}
 \description{
 Quick Response codes (QR codes) are a type of matrix bar code and can be
-used to authenticate transactions, provide access to multi-factor authenticationan
+used to authenticate transactions, provide access to multi-factor authentication
 services and enable general data transfer in an image. QR codes use four standardized
 encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store
-data. Matrix barcode generation is performed efficiently in C via the inlcuded
+data. Matrix barcode generation is performed efficiently in C via the included
 'libqrencoder' library created by Kentaro Fukuchi.
 }
 \author{
 Bob Rudis (bob@rud.is)
 }
-

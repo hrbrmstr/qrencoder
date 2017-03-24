@@ -4,9 +4,9 @@
 
 `qrencoder` : Make QR codes in R
 
-There is another package on CRAN -- [qrcode](https://cran.rstudio.com/web/packages/qrcode/index.html) -- that is not C-backed.
+There is another package on CRAN -- `qrcode` -- that is not C-backed.
 
-Quick Response codes (QR codes) are a type of matrix bar code and can be used to authenticate transactions, provide access to multi-factor authenticationan services and enable general data transfer in an image. QR codes use four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store data. Matrix barcode generation is performed efficiently in C via the inlcuded 'libqrencoder' library created by Kentaro Fukuchi.
+Quick Response codes (QR codes) are a type of matrix bar code and can be used to authenticate transactions, provide access to multi-factor authentication services and enable general data transfer in an image. QR codes use four standardized encoding modes (numeric, alphanumeric, byte/binary, and kanji) to efficiently store data. Matrix barcode generation is performed efficiently in C via the included 'libqrencoder' library created by Kentaro Fukuchi.
 
 The following functions are implemented:
 
@@ -86,7 +86,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Thu Sep 15 17:52:06 2016"
+#> [1] "Thu Sep 15 18:01:43 2016"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================

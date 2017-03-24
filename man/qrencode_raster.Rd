@@ -20,4 +20,3 @@ image(qrencode_raster("http://rud.is/b"), asp=1, col=c("white", "black"),
                                           axes=FALSE, xlab="", ylab="")
 par(mar=old_mar)
 }
-

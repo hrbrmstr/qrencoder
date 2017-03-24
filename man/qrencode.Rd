@@ -15,4 +15,3 @@ Useful if you want to do your own post-processing
 \examples{
 qrencode("http://rud.is/b")
 }
-

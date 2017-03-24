@@ -32,4 +32,3 @@ Encodes a string as a QR coder
 \seealso{
 \url{http://www.qrcode.com/en/about/version.html}
 }
-

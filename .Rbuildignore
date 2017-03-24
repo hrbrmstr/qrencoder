@@ -4,5 +4,5 @@
 ^README-.*\.png$
 ^\.travis\.yml$
 ^CONDUCT\.md$
-^README\.Rmd$
 ^README\.html$
+^cran-comments\.md$
