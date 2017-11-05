@@ -242,5 +242,5 @@ CharacterVector qrencode_svg(
                                version,
                                (QRecLevel)level,
                                (QRencodeMode)hint, caseinsensitive);
-  return(writeSVG(qrcode));
+  return(writeSVG(qrcode, margin, size, dpi));
 }
