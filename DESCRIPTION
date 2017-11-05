@@ -1,6 +1,6 @@
 Package: qrencoder
 Title: Quick Response Code (QR Code) / Matrix Barcode Creator
-Version: 0.1.1
+Version: 0.2.1
 Authors@R: c(
     person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
     person("Kentaro", "Fukuchi", role=("ctb"), comment="libqrencoder")

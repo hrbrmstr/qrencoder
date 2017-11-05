@@ -1,7 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-![](https://travis-ci.org/hrbrmstr/qrencoder.svg)
-
 `qrencoder` : Make QR codes in R
 
 There is another package on CRAN -- `qrcode` -- that is not C-backed.
@@ -14,6 +12,7 @@ The following functions are implemented:
 -   `qrencode_df`: Return a QR encoded string as an x, y, z data.frame
 -   `qrencode_png`: Return a QR encoded string as a base 64 encoded inline png
 -   `qrencode_raster`: Return a QR encoded string as a raster object
+-   `qrencode_svg`: Return a QR encoded string as an svg string
 
 ### Installation
 
@@ -30,7 +29,7 @@ library(qrencoder)
 
 # current verison
 packageVersion("qrencoder")
-#> [1] '0.1.0'
+#> [1] '0.2.1'
 
 url <- "http://rud.is/b"
 head(qrencode(url))
@@ -79,6 +78,142 @@ image(qrencode_raster("http://rud.is/b"),
 
 ![](README-qr-1.png)
 
+### SVG
+
+``` r
+cat(qrencode_svg(url))
+#> <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+#> <!-- Created with qrencode 3.9.0 (http://fukuchi.org/works/qrencode/index.html.en) -->
+#> <svg width="2.01cm" height="2.01cm" viewBox="0 0 19 19" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+#>  <g id="QRcode">
+#>      <rect x="0" y="0" width="19" height="19" fill="#ffffff" />
+#>      <g id="Pattern">
+#>          <rect x="-1" y="-1" width="7" height="1" fill="#000000" />
+#>          <rect x="8" y="-1" width="1" height="1" fill="#000000" />
+#>          <rect x="11" y="-1" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="-1" width="7" height="1" fill="#000000" />
+#>          <rect x="-1" y="0" width="1" height="1" fill="#000000" />
+#>          <rect x="5" y="0" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="0" width="2" height="1" fill="#000000" />
+#>          <rect x="10" y="0" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="0" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="0" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="1" width="1" height="1" fill="#000000" />
+#>          <rect x="1" y="1" width="3" height="1" fill="#000000" />
+#>          <rect x="5" y="1" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="1" width="2" height="1" fill="#000000" />
+#>          <rect x="10" y="1" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="1" width="1" height="1" fill="#000000" />
+#>          <rect x="15" y="1" width="3" height="1" fill="#000000" />
+#>          <rect x="19" y="1" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="2" width="1" height="1" fill="#000000" />
+#>          <rect x="1" y="2" width="3" height="1" fill="#000000" />
+#>          <rect x="5" y="2" width="1" height="1" fill="#000000" />
+#>          <rect x="8" y="2" width="1" height="1" fill="#000000" />
+#>          <rect x="10" y="2" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="2" width="1" height="1" fill="#000000" />
+#>          <rect x="15" y="2" width="3" height="1" fill="#000000" />
+#>          <rect x="19" y="2" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="3" width="1" height="1" fill="#000000" />
+#>          <rect x="1" y="3" width="3" height="1" fill="#000000" />
+#>          <rect x="5" y="3" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="3" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="3" width="1" height="1" fill="#000000" />
+#>          <rect x="15" y="3" width="3" height="1" fill="#000000" />
+#>          <rect x="19" y="3" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="4" width="1" height="1" fill="#000000" />
+#>          <rect x="5" y="4" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="4" width="1" height="1" fill="#000000" />
+#>          <rect x="10" y="4" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="4" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="4" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="5" width="7" height="1" fill="#000000" />
+#>          <rect x="7" y="5" width="1" height="1" fill="#000000" />
+#>          <rect x="9" y="5" width="1" height="1" fill="#000000" />
+#>          <rect x="11" y="5" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="5" width="7" height="1" fill="#000000" />
+#>          <rect x="7" y="6" width="3" height="1" fill="#000000" />
+#>          <rect x="11" y="6" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="7" width="2" height="1" fill="#000000" />
+#>          <rect x="2" y="7" width="1" height="1" fill="#000000" />
+#>          <rect x="5" y="7" width="2" height="1" fill="#000000" />
+#>          <rect x="8" y="7" width="2" height="1" fill="#000000" />
+#>          <rect x="13" y="7" width="3" height="1" fill="#000000" />
+#>          <rect x="17" y="7" width="2" height="1" fill="#000000" />
+#>          <rect x="0" y="8" width="1" height="1" fill="#000000" />
+#>          <rect x="3" y="8" width="1" height="1" fill="#000000" />
+#>          <rect x="10" y="8" width="3" height="1" fill="#000000" />
+#>          <rect x="15" y="8" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="8" width="1" height="1" fill="#000000" />
+#>          <rect x="0" y="9" width="6" height="1" fill="#000000" />
+#>          <rect x="7" y="9" width="1" height="1" fill="#000000" />
+#>          <rect x="11" y="9" width="2" height="1" fill="#000000" />
+#>          <rect x="14" y="9" width="1" height="1" fill="#000000" />
+#>          <rect x="17" y="9" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="9" width="1" height="1" fill="#000000" />
+#>          <rect x="0" y="10" width="3" height="1" fill="#000000" />
+#>          <rect x="6" y="10" width="6" height="1" fill="#000000" />
+#>          <rect x="13" y="10" width="1" height="1" fill="#000000" />
+#>          <rect x="15" y="10" width="2" height="1" fill="#000000" />
+#>          <rect x="18" y="10" width="2" height="1" fill="#000000" />
+#>          <rect x="1" y="11" width="1" height="1" fill="#000000" />
+#>          <rect x="3" y="11" width="1" height="1" fill="#000000" />
+#>          <rect x="5" y="11" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="11" width="1" height="1" fill="#000000" />
+#>          <rect x="11" y="11" width="2" height="1" fill="#000000" />
+#>          <rect x="14" y="11" width="1" height="1" fill="#000000" />
+#>          <rect x="16" y="11" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="12" width="1" height="1" fill="#000000" />
+#>          <rect x="11" y="12" width="2" height="1" fill="#000000" />
+#>          <rect x="14" y="12" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="12" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="13" width="7" height="1" fill="#000000" />
+#>          <rect x="7" y="13" width="2" height="1" fill="#000000" />
+#>          <rect x="11" y="13" width="2" height="1" fill="#000000" />
+#>          <rect x="15" y="13" width="4" height="1" fill="#000000" />
+#>          <rect x="-1" y="14" width="1" height="1" fill="#000000" />
+#>          <rect x="5" y="14" width="1" height="1" fill="#000000" />
+#>          <rect x="8" y="14" width="1" height="1" fill="#000000" />
+#>          <rect x="15" y="14" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="14" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="15" width="1" height="1" fill="#000000" />
+#>          <rect x="1" y="15" width="3" height="1" fill="#000000" />
+#>          <rect x="5" y="15" width="1" height="1" fill="#000000" />
+#>          <rect x="8" y="15" width="2" height="1" fill="#000000" />
+#>          <rect x="12" y="15" width="1" height="1" fill="#000000" />
+#>          <rect x="14" y="15" width="3" height="1" fill="#000000" />
+#>          <rect x="-1" y="16" width="1" height="1" fill="#000000" />
+#>          <rect x="1" y="16" width="3" height="1" fill="#000000" />
+#>          <rect x="5" y="16" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="16" width="3" height="1" fill="#000000" />
+#>          <rect x="11" y="16" width="1" height="1" fill="#000000" />
+#>          <rect x="13" y="16" width="3" height="1" fill="#000000" />
+#>          <rect x="18" y="16" width="2" height="1" fill="#000000" />
+#>          <rect x="-1" y="17" width="1" height="1" fill="#000000" />
+#>          <rect x="1" y="17" width="3" height="1" fill="#000000" />
+#>          <rect x="5" y="17" width="1" height="1" fill="#000000" />
+#>          <rect x="8" y="17" width="4" height="1" fill="#000000" />
+#>          <rect x="13" y="17" width="1" height="1" fill="#000000" />
+#>          <rect x="15" y="17" width="1" height="1" fill="#000000" />
+#>          <rect x="17" y="17" width="1" height="1" fill="#000000" />
+#>          <rect x="19" y="17" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="18" width="1" height="1" fill="#000000" />
+#>          <rect x="5" y="18" width="1" height="1" fill="#000000" />
+#>          <rect x="7" y="18" width="2" height="1" fill="#000000" />
+#>          <rect x="10" y="18" width="2" height="1" fill="#000000" />
+#>          <rect x="14" y="18" width="1" height="1" fill="#000000" />
+#>          <rect x="16" y="18" width="1" height="1" fill="#000000" />
+#>          <rect x="-1" y="19" width="7" height="1" fill="#000000" />
+#>          <rect x="7" y="19" width="3" height="1" fill="#000000" />
+#>          <rect x="13" y="19" width="1" height="1" fill="#000000" />
+#>          <rect x="18" y="19" width="1" height="1" fill="#000000" />
+#>      </g>
+#>  </g>
+#> </svg>
+```
+
+![](https://rud.is/dl/qr.svg)
+
 ### Test Results
 
 ``` r
@@ -86,7 +221,7 @@ library(qrencoder)
 library(testthat)
 
 date()
-#> [1] "Thu Sep 15 18:01:43 2016"
+#> [1] "Sun Nov  5 07:43:54 2017"
 
 test_dir("tests/")
 #> testthat results ========================================================================================================
