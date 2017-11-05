@@ -87,7 +87,7 @@ static void writeSVG_writeRect(FILE *fp, int x, int y, int width, char* col, flo
   }
 }
 
-CharacterVector writeSVG(QRcode *qrcode, int margin = 4, int size = 3, int dpi = 72) {
+CharacterVector writeSVG(QRcode *qrcode, int margin, int size, int dpi) {
 
   FILE *fp;
   unsigned char *row, *p;
