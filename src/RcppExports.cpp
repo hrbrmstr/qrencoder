@@ -21,8 +21,8 @@ BEGIN_RCPP
 END_RCPP
 }
 // qrencode_svg
-CharacterVector qrencode_svg(std::string to_encode, int version, int level, int hint, int caseinsensitive);
-RcppExport SEXP _qrencoder_qrencode_svg(SEXP to_encodeSEXP, SEXP versionSEXP, SEXP levelSEXP, SEXP hintSEXP, SEXP caseinsensitiveSEXP) {
+CharacterVector qrencode_svg(std::string to_encode, int version, int level, int hint, int caseinsensitive, int margin, int size, int dpi);
+RcppExport SEXP _qrencoder_qrencode_svg(SEXP to_encodeSEXP, SEXP versionSEXP, SEXP levelSEXP, SEXP hintSEXP, SEXP caseinsensitiveSEXP, SEXP marginSEXP, SEXP sizeSEXP, SEXP dpiSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -31,14 +31,17 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< int >::type level(levelSEXP);
     Rcpp::traits::input_parameter< int >::type hint(hintSEXP);
     Rcpp::traits::input_parameter< int >::type caseinsensitive(caseinsensitiveSEXP);
-    rcpp_result_gen = Rcpp::wrap(qrencode_svg(to_encode, version, level, hint, caseinsensitive));
+    Rcpp::traits::input_parameter< int >::type margin(marginSEXP);
+    Rcpp::traits::input_parameter< int >::type size(sizeSEXP);
+    Rcpp::traits::input_parameter< int >::type dpi(dpiSEXP);
+    rcpp_result_gen = Rcpp::wrap(qrencode_svg(to_encode, version, level, hint, caseinsensitive, margin, size, dpi));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
     {"_qrencoder_qrencode_raw", (DL_FUNC) &_qrencoder_qrencode_raw, 5},
-    {"_qrencoder_qrencode_svg", (DL_FUNC) &_qrencoder_qrencode_svg, 5},
+    {"_qrencoder_qrencode_svg", (DL_FUNC) &_qrencoder_qrencode_svg, 8},
     {NULL, NULL, 0}
 };
 

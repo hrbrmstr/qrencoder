@@ -5,7 +5,7 @@
 \title{Return a QR encoded string as an svg string}
 \usage{
 qrencode_svg(to_encode, version = 0L, level = 0L, hint = 2L,
-  caseinsensitive = 1L)
+  caseinsensitive = 1L, margin = -1L, size = 3L, dpi = 72L)
 }
 \arguments{
 \item{to_encode}{character string to encode}
@@ -28,6 +28,12 @@ If you want to embed UTF-8 string, choose this. Trying to encode UTF-8 with mode
 }}
 
 \item{caseinsensitive}{case-sensitive(\code{1}) or not(\code{0}).}
+
+\item{margin}{width of the marginsl default is 4}
+
+\item{size}{module size in dots (pixels); default is 3}
+
+\item{dpi}{resolution; default = 72}
 }
 \description{
 Encodes a string as a QR coder

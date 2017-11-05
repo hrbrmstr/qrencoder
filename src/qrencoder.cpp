@@ -11,9 +11,6 @@ using namespace Rcpp;
 #define INCHES_PER_METER (100.0/2.54)
 
 static int rle = 1;
-static int margin = -1;
-static int size = 3;
-static int dpi = 72;
 static unsigned int fg_color[4] = {0, 0, 0, 255};
 static unsigned int bg_color[4] = {255, 255, 255, 255};
 
@@ -90,7 +87,7 @@ static void writeSVG_writeRect(FILE *fp, int x, int y, int width, char* col, flo
   }
 }
 
-CharacterVector writeSVG(QRcode *qrcode) {
+CharacterVector writeSVG(QRcode *qrcode, int margin = 4, int size = 3, int dpi = 72) {
 
   FILE *fp;
   unsigned char *row, *p;
@@ -228,17 +225,18 @@ CharacterVector writeSVG(QRcode *qrcode) {
 //' - "\code{1}" is "alphanumeric mode"
 //' - "\code{5}" is "ECI mode".
 //' @param caseinsensitive case-sensitive(\code{1}) or not(\code{0}).
+//' @param margin width of the marginsl default is 4
+//' @param size  module size in dots (pixels); default is 3
+//' @param dpi resolution; default = 72
 //' @seealso \url{http://www.qrcode.com/en/about/version.html}
 //' @export
 // [[Rcpp::export]]
-CharacterVector qrencode_svg(std::string to_encode,
-                             int version=0,
-                             int level=0,
-                             int hint=2,
-                             int caseinsensitive=1) {
+CharacterVector qrencode_svg(
+    std::string to_encode,
+    int version=0, int level=0, int hint=2,
+    int caseinsensitive=1, int margin = -1, int size = 3, int dpi = 72) {
 
   QRcode *qrcode ;
-
 
   qrcode = QRcode_encodeString(to_encode.c_str(),
                                version,

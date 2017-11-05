@@ -41,9 +41,12 @@ qrencode_raw <- function(to_encode, version = 0L, level = 0L, hint = 2L, caseins
 #' - "\code{1}" is "alphanumeric mode"
 #' - "\code{5}" is "ECI mode".
 #' @param caseinsensitive case-sensitive(\code{1}) or not(\code{0}).
+#' @param margin width of the marginsl default is 4
+#' @param size  module size in dots (pixels); default is 3
+#' @param dpi resolution; default = 72
 #' @seealso \url{http://www.qrcode.com/en/about/version.html}
 #' @export
-qrencode_svg <- function(to_encode, version = 0L, level = 0L, hint = 2L, caseinsensitive = 1L) {
-    .Call(`_qrencoder_qrencode_svg`, to_encode, version, level, hint, caseinsensitive)
+qrencode_svg <- function(to_encode, version = 0L, level = 0L, hint = 2L, caseinsensitive = 1L, margin = -1L, size = 3L, dpi = 72L) {
+    .Call(`_qrencoder_qrencode_svg`, to_encode, version, level, hint, caseinsensitive, margin, size, dpi)
 }
 
