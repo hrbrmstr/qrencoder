@@ -46,7 +46,7 @@ qrencode_raw <- function(to_encode, version = 0L, level = 0L, hint = 2L, caseins
 #' @param dpi resolution; default = 72
 #' @seealso \url{http://www.qrcode.com/en/about/version.html}
 #' @export
-qrencode_svg <- function(to_encode, version = 0L, level = 0L, hint = 2L, caseinsensitive = 1L, margin = -1L, size = 3L, dpi = 72L) {
+qrencode_svg <- function(to_encode, version = 0L, level = 0L, hint = 2L, caseinsensitive = 1L, margin = 0L, size = 3L, dpi = 72L) {
     .Call(`_qrencoder_qrencode_svg`, to_encode, version, level, hint, caseinsensitive, margin, size, dpi)
 }
 

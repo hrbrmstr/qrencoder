@@ -5,7 +5,7 @@
 \title{Return a QR encoded string as an svg string}
 \usage{
 qrencode_svg(to_encode, version = 0L, level = 0L, hint = 2L,
-  caseinsensitive = 1L, margin = -1L, size = 3L, dpi = 72L)
+  caseinsensitive = 1L, margin = 0L, size = 3L, dpi = 72L)
 }
 \arguments{
 \item{to_encode}{character string to encode}

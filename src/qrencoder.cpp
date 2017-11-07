@@ -234,7 +234,7 @@ CharacterVector writeSVG(QRcode *qrcode, int margin, int size, int dpi) {
 CharacterVector qrencode_svg(
     std::string to_encode,
     int version=0, int level=0, int hint=2,
-    int caseinsensitive=1, int margin = -1, int size = 3, int dpi = 72) {
+    int caseinsensitive=1, int margin = 0, int size = 3, int dpi = 72) {
 
   QRcode *qrcode ;
 
