@@ -23,7 +23,7 @@ and encodes them in Kanji-mode.
 \item If "\code{2}" is given, all of non-alphanumerical characters will be encoded as is.
 If you want to embed UTF-8 string, choose this. Trying to encode UTF-8 with modes will cause an error.
 \item "\code{0}" is "numeric mode",
-\item "\code{1}" is "alphanumeric mode"
+\item "`1" is "alphanumeric mode"
 \item "\code{5}" is "ECI mode".
 }}
 

@@ -18,18 +18,18 @@ static unsigned int bg_color[4] = {255, 255, 255, 255};
 //' @title Encodes a string as a QR code
 //' @description Encodes a string as a QR coder
 //' @param to_encode character string to encode
-//' @param version version of the symbol. If \code{0}, the library chooses the
+//' @param version version of the symbol. If `0`, the library chooses the
 //'        minimum version for the given input data.
-//' @param level error correction level (\code{0} - \code{3}, lowest to highest)
+//' @param level error correction level (`0` - `3`, lowest to highest)
 //' @param hint tell the library how Japanese Kanji characters should be
 //'        encoded:
-//' - If "\code{3}", the library assumes that the given string contains Shift-JIS characters
+//' - If "`3`", the library assumes that the given string contains Shift-JIS characters
 //'   and encodes them in Kanji-mode.
-//' - If "\code{2}" is given, all of non-alphanumerical characters will be encoded as is.
+//' - If "`2`" is given, all of non-alphanumerical characters will be encoded as is.
 //'   If you want to embed UTF-8 string, choose this. Trying to encode UTF-8 with modes will cause an error.
-//' - "\code{0}" is "numeric mode",
-//' - "\code{1}" is "alphanumeric mode"
-//' - "\code{5}" is "ECI mode".
+//' - "`0`" is "numeric mode",
+//' - "`1`" is "alphanumeric mode"
+//' - "`5`" is "ECI mode".
 //' @param caseinsensitive case-sensitive(\code{1}) or not(\code{0}).
 //' @seealso \url{http://www.qrcode.com/en/about/version.html}
 //' @export
@@ -212,19 +212,19 @@ CharacterVector writeSVG(QRcode *qrcode, int margin, int size, int dpi) {
 //' @title Return a QR encoded string as an svg string
 //' @description Encodes a string as a QR coder
 //' @param to_encode character string to encode
-//' @param version version of the symbol. If \code{0}, the library chooses the
+//' @param version version of the symbol. If `0`, the library chooses the
 //'        minimum version for the given input data.
-//' @param level error correction level (\code{0} - \code{3}, lowest to highest)
+//' @param level error correction level (`0` - `3`, lowest to highest)
 //' @param hint tell the library how Japanese Kanji characters should be
 //'        encoded:
-//' - If "\code{3}", the library assumes that the given string contains Shift-JIS characters
+//' - If "`3`", the library assumes that the given string contains Shift-JIS characters
 //'   and encodes them in Kanji-mode.
-//' - If "\code{2}" is given, all of non-alphanumerical characters will be encoded as is.
+//' - If "`2`" is given, all of non-alphanumerical characters will be encoded as is.
 //'   If you want to embed UTF-8 string, choose this. Trying to encode UTF-8 with modes will cause an error.
-//' - "\code{0}" is "numeric mode",
-//' - "\code{1}" is "alphanumeric mode"
-//' - "\code{5}" is "ECI mode".
-//' @param caseinsensitive case-sensitive(\code{1}) or not(\code{0}).
+//' - "`0`" is "numeric mode",
+//' - "`1" is "alphanumeric mode"
+//' - "`5`" is "ECI mode".
+//' @param caseinsensitive case-sensitive(`1`) or not(`0`).
 //' @param margin width of the marginsl default is 4
 //' @param size  module size in dots (pixels); default is 3
 //' @param dpi resolution; default = 72

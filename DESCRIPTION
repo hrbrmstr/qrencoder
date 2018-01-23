@@ -2,7 +2,8 @@ Package: qrencoder
 Title: Quick Response Code (QR Code) / Matrix Barcode Creator
 Version: 0.2.1
 Authors@R: c(
-    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre")),
+    person("Bob", "Rudis", email = "bob@rud.is", role = c("aut", "cre"), 
+           comment = c(ORCID = "0000-0001-5670-2640")),
     person("Kentaro", "Fukuchi", role=("ctb"), comment="libqrencoder")
   )
 Maintainer: Bob Rudis <bob@rud.is>
@@ -26,4 +27,4 @@ Imports:
     png
 URL: http://github.com/hrbrmstr/qrencoder
 BugReports: https://github.com/hrbrmstr/qrencoder/issues
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
